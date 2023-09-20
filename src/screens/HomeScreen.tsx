@@ -367,7 +367,7 @@ const HomeScreen = ({ navigation }: TabsStackScreenProps<"Home">) => {
                         backgroundColor: "#fff",
                       }}
                     >
-                      <Icons name="add-shopping-cart" size={18} color="#000" />
+                      <Icons name="add-shopping-cart" size={20} color="#000" />
                     </TouchableOpacity>
                   </BlurView>
                 </View>
