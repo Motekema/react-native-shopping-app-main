@@ -16,7 +16,11 @@ const ProfileScreen = () => {
 const { colors } = useTheme();
   return (
     <SafeAreaView style={styles.container}>
-
+       <View style={styles.iconContainer}>
+      <Icon name="menu" color="#777777" size={40} />
+      <View style={styles.horizontalSeparator} />
+      <Icon name="account-edit" color="#777777" size={40} />
+    </View>
       <View style={styles.userInfoSection}>
         <View style={{flexDirection: 'row', marginTop: 15}}>
           <Avatar.Image 
@@ -152,6 +156,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 16,
     lineHeight: 26,
+  },
+    iconContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'space-around',      // Arrange items horizontally
+    alignItems: 'center', 
+  },
+  horizontalSeparator: {
+     width: 250,                // Adjust the space between icons
   },
 });
 
