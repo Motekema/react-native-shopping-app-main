@@ -101,15 +101,15 @@ const PriceRangeSelector = ({
     () => (
       <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
         {new Array(Math.round(maxPrice / 50)).fill("").map((_, i) => {
-          const randomVlaue = Math.random();
+          const randomValue = Math.random();
           return (
             <View
               key={i}
               style={{
                 flex: 1,
-                height: Math.round(randomVlaue * 40) + 8,
+                height: Math.round(randomValue * 40) + 8,
                 backgroundColor: "#3b82f6",
-                opacity: Math.max(0.2, Math.min(0.5, randomVlaue)),
+                opacity: Math.max(0.2, Math.min(0.5, randomValue)),
               }}
             />
           );
