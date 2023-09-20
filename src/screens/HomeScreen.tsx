@@ -334,7 +334,7 @@ const HomeScreen = ({ navigation }: TabsStackScreenProps<"Home">) => {
                   <BlurView
                     style={{
                       flexDirection: "row",
-                      backgroundColor: "rgba(0,0,0,0.5)",
+                      backgroundColor: "rgba(0,0,0,1.0)",
                       alignItems: "center",
                       padding: 6,
                       borderRadius: 100,
