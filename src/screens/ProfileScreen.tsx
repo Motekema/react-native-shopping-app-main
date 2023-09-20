@@ -7,15 +7,13 @@ import {
   Text,
   TouchableRipple,
 } from 'react-native-paper';
-
+import { useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 
 const ProfileScreen = () => {
-
-
-
+const { colors } = useTheme();
   return (
     <SafeAreaView style={styles.container}>
 
@@ -40,15 +38,15 @@ const ProfileScreen = () => {
       <View style={styles.userInfoSection}>
         <View style={styles.row}>
           <Icon name="map-marker-radius" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>Kolkata, India</Text>
+          <Text style={{color:"#f3eded", marginLeft: 20}}>Limpopo, South Africa</Text>
         </View>
         <View style={styles.row}>
           <Icon name="phone" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>+91-900000009</Text>
+          <Text style={{color:"#f3eded", marginLeft: 20}}>+27-900000009</Text>
         </View>
         <View style={styles.row}>
           <Icon name="email" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>john_doe@email.com</Text>
+          <Text style={{color:"#f3eded", marginLeft: 20}}>john_doe@email.com</Text>
         </View>
       </View>
 
@@ -57,12 +55,12 @@ const ProfileScreen = () => {
             borderRightColor: '#dddddd',
             borderRightWidth: 1
           }]}>
-            <Title>₹140.50</Title>
-            <Caption>Wallet</Caption>
+            <Title style= {{ color: "#ff2600" }}>₹140.50</Title>
+            <Caption style= {{ color: "#ff2600" }}>Wallet</Caption>
           </View>
           <View style={styles.infoBox}>
-            <Title>12</Title>
-            <Caption>Orders</Caption>
+            <Title style= {{ color: "#ff2600" }}>12</Title>
+            <Caption style= {{ color: "#ff2600" }}>Orders</Caption>
           </View>
       </View>
 
@@ -115,11 +113,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#ffffff',
   },
   caption: {
     fontSize: 14,
     lineHeight: 14,
     fontWeight: '500',
+    color: '#cac8c8',
   },
   row: {
     flexDirection: 'row',
@@ -127,9 +127,9 @@ const styles = StyleSheet.create({
   },
   infoBoxWrapper: {
     borderBottomColor: '#dddddd',
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderTopColor: '#dddddd',
-    borderTopWidth: 1,
+    borderTopWidth: 2,
     flexDirection: 'row',
     height: 100,
   },

@@ -31,7 +31,7 @@ export default function App() {
             ...DefaultTheme,
             colors: {
               ...DefaultTheme.colors,
-              background: "#f5f5f5",
+              background: "#918f8f",
               text: "#191919",
               border: "#D9D9D9",
               primary: "#191919",
