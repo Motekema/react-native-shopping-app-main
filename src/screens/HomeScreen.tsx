@@ -21,10 +21,10 @@ import { TabsStackScreenProps } from "../navigators/TabsNavigator";
 const CATEGORIES = [
   "Clothing",
   "Shoes",
-  "Accessories",
-  "Accessories 2",
-  "Accessories 3",
-  "Accessories 4",
+  "Phones",
+  "Electronic",
+  "Home Choice",
+  "Food",
 ];
 
 const AVATAR_URL =
