@@ -6,7 +6,7 @@ import Icons from "@expo/vector-icons/MaterialIcons";
 import PriceRangeSelector from "./PriceRangeSelector";
 import { BottomSheetScrollView } from "@gorhom/bottom-sheet";
 
-const MAX_PRICE = 500;
+const MAX_PRICE = 1200;
 
 const COLORS = [
   {
