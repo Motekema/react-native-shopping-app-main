@@ -5,6 +5,7 @@ import {
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import { CompositeScreenProps } from "@react-navigation/native";
 import { RootStackScreenProps } from "./RootNavigator";
@@ -62,7 +63,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen
         name="Profile"
-        component={Example}
+        component={ProfileScreen}
         options={{
           tabBarIcon(props) {
             return <Icons name="person" {...props} />;
