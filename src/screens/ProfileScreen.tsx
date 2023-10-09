@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, SafeAreaView, StyleSheet} from 'react-native';
+import {View, SafeAreaView,ScrollView, StyleSheet} from 'react-native';
 import {
   Avatar,
   Title,
@@ -16,6 +16,7 @@ const ProfileScreen = () => {
 const { colors } = useTheme();
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
        <View style={styles.iconContainer}>
       <Icon name="menu" color="#777777" size={40} />
       <View style={styles.horizontalSeparator} />
@@ -100,6 +101,7 @@ const { colors } = useTheme();
           </View>
         </TouchableRipple>
       </View>
+     </ScrollView>
     </SafeAreaView>
   );
 };
