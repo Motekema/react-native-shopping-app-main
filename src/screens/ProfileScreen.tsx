@@ -18,9 +18,13 @@ const { colors } = useTheme();
     <SafeAreaView style={styles.container}>
       <ScrollView>
        <View style={styles.iconContainer}>
-      <Icon name="menu" color="#777777" size={40} />
+      <TouchableRipple onPress={() => {}}>
+            <Icon name="menu" color="#777777" size={40} />
+      </TouchableRipple>
       <View style={styles.horizontalSeparator} />
-      <Icon name="account-edit" color="#777777" size={40} />
+      <TouchableRipple onPress={() => {}}>
+            <Icon name="account-edit" color="#777777" size={40} />
+      </TouchableRipple>
     </View>
       <View style={styles.userInfoSection}>
         <View style={{flexDirection: 'row', marginTop: 15}}>
