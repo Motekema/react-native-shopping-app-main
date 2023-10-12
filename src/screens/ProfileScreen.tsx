@@ -86,7 +86,7 @@ const { colors } = useTheme();
             <Text style={styles.menuItemText}>Payment</Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple >
+        <TouchableRipple onPress={() => {}} >
           <View style={styles.menuItem}>
             <Icon name="share-outline" color="#ff2701" size={25}/>
             <Text style={styles.menuItemText}>Tell Your Friends</Text>
