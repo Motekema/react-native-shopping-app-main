@@ -1,7 +1,9 @@
 import React from 'react'
 import { Text,StyleSheet,Button } from 'react-native'
+import { RootStackScreenProps } from "../navigators/RootNavigator";
 
 function EditProfileScreen() {
+  
   return (
     <view style={styles.container}>
        <Text>Edit Profile</Text>
@@ -12,6 +14,7 @@ function EditProfileScreen() {
     </view>
   )
 }
+
 
 export default EditProfileScreen
 

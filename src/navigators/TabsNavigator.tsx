@@ -65,6 +65,7 @@ const TabsNavigator = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
+          title:'',
           tabBarIcon(props) {
             return <Icons name="person" {...props} />;
           },

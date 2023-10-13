@@ -6,6 +6,8 @@ import {
 } from "@react-navigation/native-stack";
 import DetailsScreen from "../screens/DetailsScreen";
 import TabsNavigator, { TabsStackParamList } from "./TabsNavigator";
+import EditProfileScreen from "../screens/EditProfileScreen";
+
 
 export type RootStackParamList = {
   TabsStack: NavigatorScreenParams<TabsStackParamList>;
@@ -36,6 +38,7 @@ const RootNavigator = () => {
           headerShown: false,
         }}
       />
+      
     </RootStack.Navigator>
   );
 };
