@@ -17,6 +17,7 @@ import {
   Caption,
   TouchableRipple,
 } from 'react-native-paper';
+import PaymentScreen from "../screens/PaymentScreen";
 
 export type TabsStackParamList = {
   Home: undefined;
@@ -70,7 +71,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen
         name="Payment"
-        component={Example}
+        component={PaymentScreen}
         options={{
           tabBarIcon(props) {
             return <Icons name="account-balance-wallet" {...props} />;
