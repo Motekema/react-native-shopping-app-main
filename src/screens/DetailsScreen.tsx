@@ -248,9 +248,10 @@ const DetailsScreen = ({
               style={{ color: colors.text, opacity: 0.75 }}
               numberOfLines={3}
             >
-              Aute magna dolore sint ipsum dolor fugiat. Ad magna ad elit labore
-              culpa sunt sint laboris consectetur sunt. Lorem excepteur occaecat
-              reprehenderit nostrud culpa ad ex exercitation tempor.
+              "Such great pain, I don't even feel it. I feel great, 
+              but I'm in labor, and it's not my fault, I swear. 
+              Except for this reprehensible work, it's not my fault,
+              it's just temporary."
             </Text>
           </View>
 
