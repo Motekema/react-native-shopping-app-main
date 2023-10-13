@@ -109,7 +109,7 @@ const Example = () => {
 const styles = StyleSheet.create({
   iconContainer: {
     flexDirection: 'row', 
-    justifyContent: 'space-around',      // Arrange items horizontally
+    justifyContent: 'flex-start',      // Arrange items horizontally
     alignItems: 'center', 
   },
   horizontalSeparator: {
