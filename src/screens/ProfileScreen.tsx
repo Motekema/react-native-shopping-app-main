@@ -37,8 +37,12 @@ const { colors } = useTheme();
 
       <View style={styles.userInfoSection}>
         <View style={styles.row}>
+          <Icon name="map-marker-circle" color="#777777" size={20}/>
+          <Text style={{color:"#f3eded", marginLeft: 20}}>Limpopo, Jane Furse , RiverSide B</Text>
+        </View>
+         <View style={styles.row}>
           <Icon name="map-marker-radius" color="#777777" size={20}/>
-          <Text style={{color:"#f3eded", marginLeft: 20}}>Limpopo, Jane Furse , RiverSide B, South Africa</Text>
+          <Text style={{color:"#f3eded", marginLeft: 20}}>South Africa</Text>
         </View>
         <View style={styles.row}>
           <Icon name="phone" color="#777777" size={20}/>
