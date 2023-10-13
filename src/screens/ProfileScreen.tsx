@@ -17,15 +17,6 @@ const { colors } = useTheme();
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-       <View style={styles.iconContainer}>
-      <TouchableRipple onPress={() => {}}>
-            <Icon name="menu" color="#777777" size={40} />
-      </TouchableRipple>
-      <View style={styles.horizontalSeparator} />
-      <TouchableRipple onPress={() => {}}>
-            <Icon name="account-edit" color="#777777" size={40} />
-      </TouchableRipple>
-    </View>
       <View style={styles.userInfoSection}>
         <View style={{flexDirection: 'row', marginTop: 15}}>
           <Avatar.Image 
@@ -163,13 +154,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
   },
-    iconContainer: {
-    flexDirection: 'row', 
-    justifyContent: 'space-around',      // Arrange items horizontally
-    alignItems: 'center', 
-  },
-  horizontalSeparator: {
-     width: 250,                // Adjust the space between icons
-  },
+ 
 });
 

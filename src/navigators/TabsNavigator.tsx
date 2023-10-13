@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import {
   BottomTabScreenProps,
@@ -10,6 +10,13 @@ import Icons from "@expo/vector-icons/MaterialIcons";
 import { CompositeScreenProps } from "@react-navigation/native";
 import { RootStackScreenProps } from "./RootNavigator";
 import CustomBottomTabs from "../components/CustomBottomTabs";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {
+  Avatar,
+  Title,
+  Caption,
+  TouchableRipple,
+} from 'react-native-paper';
 
 export type TabsStackParamList = {
   Home: undefined;
@@ -26,6 +33,15 @@ export type TabsStackScreenProps<T extends keyof TabsStackParamList> =
   >;
 
 const TabsNavigator = () => {
+
+   const handleMenuPress = () => {
+    // Handle the menu button action here
+  };
+
+  const handleAccountEditPress = () => {
+    // Handle the account-edit button action here
+  };
+
   return (
     <TabsStack.Navigator
       screenOptions={{
@@ -62,15 +78,24 @@ const TabsNavigator = () => {
         }}
       />
       <TabsStack.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          title:'',
-          tabBarIcon(props) {
-            return <Icons name="person" {...props} />;
-          },
-        }}
-      />
+         name="Profile"
+         component={ProfileScreen}
+         options={{
+         title: '',
+         tabBarIcon: (props) => <Icons name="person" {...props} />,
+         headerRight: () => (
+         <View style={styles.iconContainer}>
+           <TouchableRipple onPress={handleMenuPress}>
+           <Icon name="menu" color="#777777" size={40} />
+           </TouchableRipple>
+           <View style={styles.horizontalSeparator} />
+           <TouchableRipple onPress={handleAccountEditPress}>
+           <Icon name="account-edit" color="#777777" size={40} />
+          </TouchableRipple>
+        </View>
+    ),
+  }}
+/>
     </TabsStack.Navigator>
   );
 };
@@ -80,3 +105,15 @@ export default TabsNavigator;
 const Example = () => {
   return <View />;
 };
+
+const styles = StyleSheet.create({
+  iconContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'space-around',      // Arrange items horizontally
+    alignItems: 'center', 
+  },
+  horizontalSeparator: {
+     width: 350,                // Adjust the space between icons
+  },
+
+})
