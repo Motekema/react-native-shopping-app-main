@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
   },
   horizontalSeparator: {
-     width: 350,                // Adjust the space between icons
+     width: 330,                // Adjust the space between icons
   },
 
 })
