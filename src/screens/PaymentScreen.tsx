@@ -8,21 +8,27 @@ import {
   StyleSheet,
   FlatList,
 } from "react-native";
-import { white } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 function PaymentScreen() {
   return (
     <View style={styles.container}>
+   
       <View style={styles.cardHeader}>
+        <Text style={styles.visualCard}>Visual Card</Text>
         <View style={styles.microchip}>
             <Icon name="chip" color="gold" size={45}/>
             <View style={styles.horizontalSeparator}/>   
             <Icon name="contactless-payment-circle-outline" color="white" size={45}/>
+            <Text style={styles.cardType}>debit</Text>
         </View>
-        <Text style={styles.cardNumber}>5879   0888   5634   5647</Text> 
+            <Text style={styles.cardNumber}>5879   0888   5634   5647</Text> 
         <View>
             <Text style={styles.expiresEnd}>EXPIRES END</Text>
+        </View> 
+        <View>
+            <Text style={styles.expiresEndNumber}>04/28</Text>
         </View> 
       </View>
     </View>
@@ -35,7 +41,7 @@ const styles = StyleSheet.create({
   container:{
     marginHorizontal: 20,
     height: 250,
-    backgroundColor: 'black',
+    backgroundColor: '#0000ff',
     marginTop: 15,
     borderRadius: 10,
   },
@@ -54,12 +60,32 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontSize: 25,
     color: '#f8f8ff',
-    justifyContent: "flex-start",
+    paddingLeft: 10,
   },
   expiresEnd:{
     color: '#f8f8ff',
     fontSize: 11,
     margin:1,
-    alignItems: 'center',
+    paddingLeft: 100,
+  },
+   expiresEndNumber:{
+    color: '#f8f8ff',
+    fontSize: 18,
+    margin:1,
+    paddingLeft: 180,
+  },
+   cardType:{
+    color: '#f8f8ff',
+    fontSize: 18,
+    margin: 20,
+    marginBottom: 1,
+    paddingLeft: 165,
+  },
+   visualCard:{
+    color: '#f8f8ff',
+    fontSize: 18,
+    marginBottom: -50,
+    margin: 18,
+    marginLeft: 210,
   }
 })
