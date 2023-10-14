@@ -73,9 +73,19 @@ const TabsNavigator = () => {
         name="Payment"
         component={PaymentScreen}
         options={{
-          tabBarIcon(props) {
-            return <Icons name="account-balance-wallet" {...props} />;
-          },
+          title: "",
+          tabBarIcon: (props) => <Icons name="account-balance-wallet" {...props} />,
+         headerRight: () => (
+         <View style={styles.iconContainer}>
+           <TouchableRipple onPress={handleMenuPress}>
+           <Icon name="menu" color="#777777" size={40} />
+           </TouchableRipple>
+           <View style={styles.horizontalSeparator} />
+           <TouchableRipple onPress={handleAccountEditPress}>
+           <Icon name="account-details" color="#777777" size={40} />
+          </TouchableRipple>
+        </View>
+         ),
         }}
       />
       <TabsStack.Screen
