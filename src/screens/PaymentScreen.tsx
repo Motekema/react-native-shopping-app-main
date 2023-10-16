@@ -94,10 +94,10 @@ const styles = StyleSheet.create({
     marginLeft: 0.41 * width,
   },
   Amount:{
-    marginHorizontal: 0.05 * width,
+    marginHorizontal: 0.01 * width,
     height: 50,
-    backgroundColor: '#f0fff0',
-    marginTop: 55,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    marginTop: 45,
     borderRadius: 10,
     alignItems: 'center',
     fontSize: 30, 
