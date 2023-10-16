@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, Image, SafeAreaView, StyleSheet, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; 
+import { View, Text, Image, SafeAreaView, StyleSheet,TouchableOpacity, FlatList } from 'react-native';
+import Icons from "@expo/vector-icons/MaterialIcons"; 
+import React, { useRef, useState } from "react";
 
 const foods = [
   {
@@ -36,6 +36,9 @@ const foods = [
 ];
 
 const CartScreen = ({navigation}) => {
+
+    const [count, setCount] = useState(1);
+
   const CartCard = ({ item }) => (
     <View style={style.cartCard}>
       <Image source={item.image} style={{ height: 80, width: 80 }} />
@@ -45,10 +48,53 @@ const CartScreen = ({navigation}) => {
         <Text style={{ fontSize: 17, fontWeight: 'bold' }}>${item.price}</Text>
       </View>
       <View style={{ marginRight: 20, alignItems: 'center' }}>
-        <Text style={{ fontWeight: 'bold', fontSize: 18 }}>3</Text>
         <View style={style.actionBtn}>
-          <Icon name="chevron-double-left" size={25} color="white" />
-          <Icon name="chevron-double-right" size={25} color="white" />
+          <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                gap: 6,
+                backgroundColor: 'gray',
+                padding: 6,
+                borderRadius: 100,
+              }}
+            >
+              <TouchableOpacity
+                onPress={() => setCount((count) => Math.max(1, count - 1))}
+                style={{
+                  backgroundColor: 'black',
+                  width: 34,
+                  aspectRatio: 1,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 34,
+                }}
+              >
+                <Icons name="remove" size={20} color='white' />
+              </TouchableOpacity>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: "600",
+                  color: 'black',
+                }}
+              >
+                {count}
+              </Text>
+              <TouchableOpacity
+                onPress={() => setCount((count) => Math.min(10, count + 1))}
+                style={{
+                  backgroundColor: 'black',
+                  width: 34,
+                  aspectRatio: 1,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 34,
+                }}
+              >
+                <Icons name="add" size={20} color='white' />
+              </TouchableOpacity>
+            </View>
         </View>
       </View>
     </View>
@@ -89,7 +135,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   actionBtn: {
-    backgroundColor: '#696969', // Add a suitable background color
+    // Add a suitable background color
     borderRadius: 25, // Adjust as needed
     alignItems: 'center',
     justifyContent: 'space-between',
