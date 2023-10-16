@@ -30,7 +30,7 @@ function PaymentScreen() {
         </View>
       </View>
       <View>
-         <Text style={styles.Amount}>Amount: R 200</Text>
+         <Text style={styles.Amount}>Amount: R 7500</Text>
       </View>
       <TouchableOpacity style={styles.payButton}>
         <Text style={styles.payButtonText}>Pay</Text>
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontSize: 30, 
     justifyContent: 'center',
+    paddingLeft: 10,
   },
   payButton: {
     backgroundColor: 'green',
@@ -109,7 +110,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderRadius: 10,
-    marginTop: 40,
+    marginTop: 20,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
