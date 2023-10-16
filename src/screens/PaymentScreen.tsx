@@ -2,24 +2,23 @@ import React from 'react';
 import {
   View,
   Text,
-  ScrollView,
-  Image,
   TouchableOpacity,
   StyleSheet,
-  FlatList,
+  Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+const { width, height } = Dimensions.get('window');
+
 function PaymentScreen() {
   return (
-    <View>
     <View style={styles.container}>
       <View style={styles.cardHeader}>
         <Text style={styles.visualCard}>Visual Card</Text>
         <View style={styles.microchip}>
-          <Icon name="chip" color="gold" size={45} />
+          <Icon name="chip" color="gold" size={30} />
           <View style={styles.horizontalSeparator} />
-          <Icon name="contactless-payment-circle-outline" color="white" size={45} />
+          <Icon name="contactless-payment-circle-outline" color="white" size={30} />
           <Text style={styles.cardType}>debit</Text>
         </View>
         <Text style={styles.cardNumber}>5879   0888   5634   5647</Text>
@@ -30,8 +29,7 @@ function PaymentScreen() {
           <Text style={styles.expiresEndNumber}>04/28</Text>
         </View>
       </View>
-    </View>
-    <TouchableOpacity style={styles.payButton}>
+      <TouchableOpacity style={styles.payButton}>
         <Text style={styles.payButtonText}>Pay</Text>
       </TouchableOpacity>
     </View>
@@ -42,68 +40,68 @@ export default PaymentScreen;
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 20,
+    marginHorizontal: 0.05 * width,
     height: 250,
     backgroundColor: '#0000ff',
     marginTop: 15,
     borderRadius: 10,
   },
   cardHeader: {
-    marginHorizontal: 35,
+    marginHorizontal: 0.1 * width,
   },
   microchip: {
-    marginTop: 95,
+    marginTop: 0.15 * height,
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   horizontalSeparator: {
-    width: 10,
+    width: 0.03 * width,
   },
   cardNumber: {
     fontStyle: 'normal',
-    fontSize: 25,
+    fontSize: 20,
     color: '#f8f8ff',
-    paddingLeft: 10,
+    paddingLeft: 0.02 * width,
   },
   expiresEnd: {
     color: '#f8f8ff',
-    fontSize: 11,
+    fontSize: 10,
     margin: 1,
-    paddingLeft: 100,
+    paddingLeft: 0.2 * width,
   },
   expiresEndNumber: {
     color: '#f8f8ff',
-    fontSize: 18,
+    fontSize: 16,
     margin: 1,
-    paddingLeft: 180,
+    paddingLeft: 0.36 * width,
   },
   cardType: {
     color: '#f8f8ff',
-    fontSize: 18,
+    fontSize: 16,
     margin: 20,
     marginBottom: 1,
-    paddingLeft: 165,
+    paddingLeft: 0.33 * width,
   },
   visualCard: {
     color: '#f8f8ff',
-    fontSize: 18,
+    fontSize: 16,
     marginBottom: -50,
     margin: 18,
-    marginLeft: 210,
+    marginLeft: 0.41 * width,
   },
   payButton: {
     backgroundColor: 'green',
-    width: 300,
-    paddingHorizontal: 15, // Instead of paddingleft
-    paddingVertical: 15, // Add paddingVertical for top and bottom padding
+    width: 0.7 * width,
+    paddingHorizontal: 15,
+    paddingVertical: 15,
     borderRadius: 10,
-    marginTop: 20,
-    alignSelf: 'center', // Align the button in the center horizontally
-    alignItems: 'center', // Align the button's content in the center horizontally
-    justifyContent: 'center', // Align the button's content in the center vertically
+    marginTop: 40,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   payButtonText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
   },
 });
