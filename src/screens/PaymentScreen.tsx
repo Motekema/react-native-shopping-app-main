@@ -29,9 +29,13 @@ function PaymentScreen() {
           <Text style={styles.expiresEndNumber}>04/28</Text>
         </View>
       </View>
+      <View>
+         <Text style={styles.Amount}>Amount: R 200</Text>
+      </View>
       <TouchableOpacity style={styles.payButton}>
         <Text style={styles.payButtonText}>Pay</Text>
       </TouchableOpacity>
+
     </View>
   );
 }
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 0.05 * width,
     height: 250,
-    backgroundColor: 'hwb(0, 0%, 100%)',
+    backgroundColor: '#4b0082',
     marginTop: 15,
     borderRadius: 10,
   },
@@ -88,6 +92,16 @@ const styles = StyleSheet.create({
     marginBottom: -50,
     margin: 18,
     marginLeft: 0.41 * width,
+  },
+  Amount:{
+    marginHorizontal: 0.05 * width,
+    height: 50,
+    backgroundColor: '#f0fff0',
+    marginTop: 55,
+    borderRadius: 10,
+    alignItems: 'center',
+    fontSize: 30, 
+    justifyContent: 'center',
   },
   payButton: {
     backgroundColor: 'green',
