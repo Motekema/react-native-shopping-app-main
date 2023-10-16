@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderRadius: 10,
-    marginTop: 20,
+    marginTop: 10,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
