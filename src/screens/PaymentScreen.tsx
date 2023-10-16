@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 0.05 * width,
     height: 250,
-    backgroundColor: '#0000ff',
+    backgroundColor: 'hwb(0, 0%, 100%)',
     marginTop: 15,
     borderRadius: 10,
   },
