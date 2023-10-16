@@ -15,10 +15,27 @@ const foods = [
     price: 20,
     image: require('../assets/images/image-2.jpg'),
   },
-  // Add more food items as needed
+   {
+    name: 'Food Item 3',
+    ingredients: 'Ingredients for item 2',
+    price: 60,
+    image: require('../assets/images/image-4.jpg'),
+  },
+    {
+    name: 'Food Item 4',
+    ingredients: 'Ingredients for item 2',
+    price: 40,
+    image: require('../assets/images/image-6.jpg'),
+  },
+    {
+    name: 'Food Item 5',
+    ingredients: 'Ingredients for item 2',
+    price: 40,
+    image: require('../assets/images/image-7.jpg'),
+  },
 ];
 
-const CartScreen = () => {
+const CartScreen = ({navigation}) => {
   const CartCard = ({ item }) => (
     <View style={style.cartCard}>
       <Image source={item.image} style={{ height: 80, width: 80 }} />
@@ -39,10 +56,7 @@ const CartScreen = () => {
 
   return (
     <SafeAreaView >
-      <View style={style.header}>
-        <Icon name="close-circle-outline" size={28} onPress={() => navigation.goBack()} />
-        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Cart</Text>
-      </View>
+      
       <FlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 80 }}
@@ -51,13 +65,10 @@ const CartScreen = () => {
         ListFooterComponentStyle={{ paddingHorizontal: 20, marginTop: 20 }}
         ListFooterComponent={() => (
           <View>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: 15 }}>
-              <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Total Price</Text>
-              <Text style={{ fontSize: 18, fontWeight: 'bold' }}>$50</Text>
-            </View>
-            <View style={{ marginHorizontal: 30 }}>  
-                 <Text style={style.payButtonText}>Pay</Text>
-            </View>
+            <View style={{ flexDirection: 'row',  justifyContent: 'space-between', marginVertical: 15 }}>
+              <Text style={{ fontSize: 18, color: "#f0f8ff" , fontWeight: 'bold' }}>Total Price</Text>
+              <Text style={{ fontSize: 18,color: "#f0f8ff", fontWeight: 'bold' }}>$50</Text>
+            </View>  
           </View>
         )}
       />
@@ -66,12 +77,6 @@ const CartScreen = () => {
 };
 
 const style = StyleSheet.create({
-  header: {
-    paddingVertical: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginHorizontal: 20,
-  },
   cartCard: {
     height: 100,
     elevation: 15,
@@ -84,26 +89,13 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   actionBtn: {
-    backgroundColor: 'blue', // Add a suitable background color
+    backgroundColor: '#696969', // Add a suitable background color
     borderRadius: 25, // Adjust as needed
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexDirection: 'row',
-  },
-    payButton: {
-    backgroundColor: 'green',
-    width: 10,
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderRadius: 10,
-    marginTop: 10,
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  payButtonText: {
-    color: 'white',
-    fontSize: 18,
+    padding: 10,
+    width: 95,
   },
 });
 

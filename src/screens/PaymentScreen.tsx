@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   payButton: {
-    backgroundColor: 'green',
+    backgroundColor: 'red',
     width: 0.7 * width,
     paddingHorizontal: 15,
     paddingVertical: 15,
